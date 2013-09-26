@@ -4,7 +4,7 @@
 /* and here http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/EPSRC_SSAZ/epsrc_ssaz.html */
 /* Requires Sylvester's Vector and JavaScript lib found here http://sylvester.jcoglan.com */
 
-/* Given 4 source points and their respective 4 transfromed points, solve aH=b, return H -- the coefficients used to transform by get_xprime and get_yprime */ 
+/* Given 4 source points and their respective 4 transformed points, solve aH=b, return H -- the coefficients used to transform by get_xprime and get_yprime */ 
 function estimate_H(x1, y1, x2, y2, x3, y3, x4, y4, u1, v1, u2, v2, u3, v3, u4, v4){
 	
 			var a = Matrix.create([
@@ -39,6 +39,6 @@ function get_xprime(x, y, H){
 	return  (H.e(1,1)*x+H.e(2,1)*y+H.e(3,1)) / (H.e(7,1)*x+H.e(8,1)*y+1);
 }
 
-function get_yprime(){
+function get_yprime(x, y, H){
 	return  (H.e(4,1)*x+H.e(5,1)*y+H.e(6,1)) / (H.e(7,1)*x+H.e(8,1)*y+1);
 }
