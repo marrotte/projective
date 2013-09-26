@@ -8,7 +8,7 @@
 function estimate_H(x1, y1, x2, y2, x3, y3, x4, y4, u1, v1, u2, v2, u3, v3, u4, v4){
 	
 			var a = Matrix.create([
-		    [x1, y1, 1,  0,  0, 0, -x1*u1, -y1*u1 ],
+                        [x1, y1, 1,  0,  0, 0, -x1*u1, -y1*u1 ],
 			[ 0,  0, 0, x1, y1, 1, -x1*v1, -y1*v1 ],
 			[x2, y2, 1,  0,  0, 0, -x2*u2, -y2*u2 ],
 			[ 0,  0, 0, x2, y2, 1, -x2*v2, -y2*v2 ],
@@ -19,7 +19,7 @@ function estimate_H(x1, y1, x2, y2, x3, y3, x4, y4, u1, v1, u2, v2, u3, v3, u4, 
 			]);  
 
 			var b = Matrix.create([
-		    [u1],
+		        [u1],
 			[v1],
 			[u2],
 			[v2],
